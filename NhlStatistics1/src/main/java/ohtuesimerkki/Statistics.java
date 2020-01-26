@@ -10,9 +10,11 @@ public class Statistics {
     private List<Player> players;
 
     //public Statistics() {
-    public Statistics(PlayerReader reader) {
+    //public Statistics(PlayerReader reader) {
+    public Statistics(Reader reader2) {
+        
 //        PlayerReader reader = new PlayerReader("https://nhlstatisticsforohtu.herokuapp.com/players.txt");        
-        players = reader.getPlayers();       
+        players = reader2.getPlayers();       
     }
 
     public Player search(String name) {
