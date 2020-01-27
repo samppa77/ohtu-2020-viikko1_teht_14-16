@@ -51,25 +51,57 @@ public class StatisticsTest {
     public void test0() {
         System.out.println("OK!!");
     }
-    
+
     @Test
     public void test1a() {
-        
+
         Player pelaaja;
         pelaaja = stats.search("Semenko");
         String nimi = pelaaja.getName();
         assertEquals("Semenko", nimi);
     }
-    
-    
+
     @Test
     public void test1b() {
-        
+
         Player pelaaja;
         pelaaja = stats.search("Ketola");
         assertNull(pelaaja);
 
     }
+
     
-    
+    @Test
+    public void test2a() {
+
+        List<Player> players2 = new ArrayList<>();
+        players2.add(new Player("Lemieux", "PIT", 45, 54));
+
+//        players2.add(new Player("Semenko", "EDM", 4, 12));
+//        players2.add(new Player("Kurri", "EDM", 37, 53));
+//        players2.add(new Player("Gretzky", "EDM", 35, 89));
+
+//        String tiimi = stats.team("PIT").getTeam();
+
+//        ArrayList<Player> players3 = stats.team("PIT");
+        List<Player> players3 = stats.team("PIT");
+        Player pelaaja = players3.get(0);
+        
+        String nimi = players3.get(0).getName();
+        /*
+                
+                .getName());
+        System.out.println(players3);
+*/
+
+//        System.out.println("Joukkue on: " + tiimi);
+
+
+        assertEquals("Lemieux", nimi);
+
+    }
+
+
+
 }
+
