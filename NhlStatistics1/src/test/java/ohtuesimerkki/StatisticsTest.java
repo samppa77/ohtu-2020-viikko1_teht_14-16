@@ -74,8 +74,8 @@ public class StatisticsTest {
     @Test
     public void test2a() {
 
-        List<Player> players2 = new ArrayList<>();
-        players2.add(new Player("Lemieux", "PIT", 45, 54));
+//        List<Player> players2 = new ArrayList<>();
+//        players2.add(new Player("Lemieux", "PIT", 45, 54));
 
 //        players2.add(new Player("Semenko", "EDM", 4, 12));
 //        players2.add(new Player("Kurri", "EDM", 37, 53));
@@ -103,5 +103,16 @@ public class StatisticsTest {
 
 
 
+    public void test2b() {
+
+//        List<Player> players2 = new ArrayList<>();
+//        players2.add(new Player("Lemieux", "PIT", 45, 54));
+
+        List<Player> players = stats.team("OTT");        
+        
+        assertNull(players);
+
+
+    }
 }
 
